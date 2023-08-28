@@ -1,0 +1,185 @@
+{% element 'snippets/banner-line' { 'banner_id': 'home', 'banner_type': 'slides' } %} 
+
+{% element 'snippets/min-banner' %}
+
+
+<div class="destaques categoria-menu swiper mySwiper">
+    <div class="container categoria-menu-carousel swiper-wrapper">
+        <div class="swiper-slide col-lg-3 col-sm-6 col-md-4 text-center">
+            <a href="#">
+                <img src=" {{ asset('img/1.png') }}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide col-lg-3 col-sm-6 col-md-4 text-center">
+            <a href="#">
+                <img src=" {{ asset('img/2.png') }}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide col-lg-3 col-sm-6 col-md-4 text-center">
+            <a href="#">
+                <img src=" {{ asset('img/3.png') }}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide col-lg-3 col-sm-6 col-md-4 text-center">
+            <a href="#">
+                <img src=" {{ asset('img/4.png') }}" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<style>
+    .categoria-menu img {
+        width: 100%;
+    }
+
+    .mySwiper .swiper-slide {
+        width: 400px !important;
+    }
+    .swiper-wrapper {
+        justify-content: center;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // Número de slides visíveis por vez
+    spaceBetween: 30, // Espaço entre os slides
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        // Configurações para telas maiores
+        768: {
+        slidesPerView: 2, // Exibir 2 slides por vez em telas maiores que 768px
+        },
+        // Configurações para telas ainda maiores
+        1024: {
+        slidesPerView: 3, // Exibir 3 slides por vez em telas maiores que 1024px
+        }
+    }
+    });
+</script>
+
+
+
+{% element 'snippets/banner-line' { 'banner_id': 'extra3', 'banner_type': 'javascript' } %} 
+{% element 'snippets/banner-line' { 'banner_id': 'extra4', 'banner_type': 'javascript' } %} 
+
+
+
+{% element 'home-showcase' { 
+    'rand' : settings.showcase_rand_products, 
+    'type' : settings.showcase_type_1, 
+    'quantity' : settings.showcase_quantity_1 
+} %} 
+
+<!--{% element 'snippets/brands-list' %} -->
+
+
+{% element 'home-showcase' { 
+    'rand' : settings.showcase_rand_products, 
+    'type' : settings.showcase_type_2, 
+    'quantity' : settings.showcase_quantity_2 
+} %} 
+
+
+
+
+{% for pages in pages.custom %} 
+    {% if pages.info == "depoimentos_de_clientes" and settings.show_reviews %}
+        <section class="section reviews" data-slides="reviews">
+            <h2 class="section-title">Depoimentos</h2>
+            <div class="reviews-container">
+                {% element 'CustomerReview.reviews' %}
+                <button class="reviews-button">
+                    <a class="button2" href="/depoimentos-de-clientes" title="Ver mais depoimentos" rel="next" target="_self">
+                        Ver mais depoimentos
+                    </a>
+                </button>
+            </div>
+        </section>
+    {% endif %} 
+{% endfor %} 
+
+{% for page in pages.custom %} 
+    {% if page.info == "noticias" %}
+        <section class="section news slide-has-dots">
+            <div class="section-header">
+                <h2 class="section-title">Not&iacute;cias</h2>
+            </div>
+            <div class="news-container">
+                <ul class="news-content"></ul>
+                <button class="news-button">
+                    <a href="{{ page.url }}" class="button2" title="Ver mais notícias" rel="next" target="_self">
+                        Ler todas as notícias
+                    </a>
+                </button>
+            </div>
+        </section>
+    {% endif %} 
+{% endfor %} 
+
+{% element 'snippets/banner-test' %}
+
+<div class="about-us">
+
+    <div class="first-content-about-us">
+        <div class="second-content-about-us">
+            <h2 class="title-about-us">O que nossos<br> clientes dizem</h2>
+            <p class="subtitle-about-us">Confira alguns depoimentos reais:</p>
+        </div>
+
+        <div class="third-content-about-us">
+            <img src="{{ asset('img/marks.svg') }}" alt="">
+            <p class="paragraph-about-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risu.</p>
+            <img src="{{ asset('img/person.png') }}" alt="" class="img-person">
+            <span class="name-about-us">João Marcos</span>
+            <p style="text-align: center; color: #969BAB; font-size: 18px;">Aracaju, SE</p>
+        </div>
+
+    </div>
+
+    <div class="other-content-about-us">
+
+        <div class="third-content-about-us">
+            <img src="{{ asset('img/marks.svg') }}" alt="">
+            <p class="paragraph-about-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risu.</p>
+            <img src="{{ asset('img/person.png') }}" alt="" class="img-person">
+            <span class="name-about-us">João Marcos</span>
+            <p style="text-align: center; color: #969BAB; font-size: 18px;">Aracaju, SE</p>
+        </div>
+
+        <div class="third-content-about-us">
+            <img src="{{ asset('img/marks.svg') }}" alt="">
+            <p class="paragraph-about-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risu.</p>
+            <img src="{{ asset('img/person.png') }}" alt="" class="img-person">
+            <span class="name-about-us">João Marcos</span>
+            <p style="text-align: center; color: #969BAB; font-size: 18px;">Aracaju, SE</p>
+        </div>
+
+    </div>
+</div>
+
+
+{% element 'snippets/banner-line' { 'banner_id': 'extra3', 'banner_type': 'container' } %}
+
+{% element 'snippets/banner-line' { 'banner_id': 'extra4', 'banner_type': 'container' } %}
+
+{% element 'snippets/banner-line' { 'banner_id': 'bottom', 'banner_type': 'container' } %}
+
+<!--<section class="section tagCloud">
+    <h2 class="section-title">{{ Translation('tags_mais_buscadas') }}</h2>
+    <ul class="tagCloud-list">
+        {% for tag in tags %}
+            <li class="tagCloud-item">
+                <a class="tagCloud-word" href="{{ tag.url }}" rel="next" target="_self">{{ tag.word }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section> -->

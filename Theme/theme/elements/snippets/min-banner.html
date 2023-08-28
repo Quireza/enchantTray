@@ -1,0 +1,119 @@
+<section class="section first-section-min ">
+  <div class="container ">
+      <div class="miniaturas-carousel" >
+
+          <div class="primeira-miniatura col">
+              <a href="#" class="media">
+                  <img src="{{ asset('img/first-min.svg') }}" class="media-img" loading="lazy" />
+                  <div>
+                      <p class="titulo-miniatura">Cachback de 10% para</p>
+                      <p class="subtitulo-miniatura">comprar a partir de R$200</p>
+                  </div>
+              </a>
+          </div>
+
+          <div class="segunda-miniatura col">
+              <a href="#" class="media">
+                  <img src="{{ asset('img/second-min.svg') }}" class="media-img" loading="lazy" />
+                  <div>
+                      <p class="titulo-miniatura">Parcelamento em até</p>
+                      <p class="subtitulo-miniatura">6x sem juros</p>
+                  </div>
+              </a>
+          </div>
+
+          <div class="terceira-miniatura col">
+              <a href="#" class="media">
+                  <img src="{{ asset('img/third-min.svg') }}" class="media-img" loading="lazy" />
+                  <div>
+                      <p class="titulo-miniatura">Frete fixo de 14,99</p>
+                      <p class="subtitulo-miniatura">para todo Brasil</p>
+                  </div>
+              </a>
+          </div>
+
+          <div class="quarta-miniatura col">
+              <a href="#" class="media">
+                  <img src="{{ asset('img/fourth-min.svg') }}" class="media-img" loading="lazy" />
+                  <div>
+                      <p class="titulo-miniatura">Desconto de 10% em compras</p>
+                      <p class="subtitulo-miniatura">pagas no PIX</p>
+                  </div>
+              </a>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+<section class="section second-section-min ">
+    <div class="container swiper mySwiper">
+        <div class="miniaturas-carousel swiper-wrapper" >
+  
+            <div class="primeira-miniatura swiper-slide">
+                <a href="#" class="media">
+                    <img src="{{ asset('img/first-min.svg') }}" class="media-img" loading="lazy" />
+                    <div>
+                        <p class="titulo-miniatura">Cachback de 10% para</p>
+                        <p class="subtitulo-miniatura">comprar a partir de R$200</p>
+                    </div>
+                </a>
+            </div>
+  
+            <div class="segunda-miniatura swiper-slide">
+                <a href="#" class="media">
+                    <img src="{{ asset('img/second-min.svg') }}" class="media-img" loading="lazy" />
+                    <div>
+                        <p class="titulo-miniatura">Parcelamento em até</p>
+                        <p class="subtitulo-miniatura">6x sem juros</p>
+                    </div>
+                </a>
+            </div>
+  
+            <div class="terceira-miniatura swiper-slide">
+                <a href="#" class="media">
+                    <img src="{{ asset('img/third-min.svg') }}" class="media-img" loading="lazy" />
+                    <div>
+                        <p class="titulo-miniatura">Frete fixo de 14,99</p>
+                        <p class="subtitulo-miniatura">para todo Brasil</p>
+                    </div>
+                </a>
+            </div>
+  
+            <div class="quarta-miniatura swiper-slide">
+                <a href="#" class="media">
+                    <img src="{{ asset('img/fourth-min.svg') }}" class="media-img" loading="lazy" />
+                    <div>
+                        <p class="titulo-miniatura">Desconto de 10% em compras</p>
+                        <p class="subtitulo-miniatura">pagas no PIX</p>
+                    </div>
+                </a>
+            </div>
+  
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+  
